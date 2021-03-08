@@ -1,3 +1,5 @@
+import { Trans } from "@lingui/macro";
+import LangSwitcher from "components/language-switcher";
 import Head from "next/head";
 import styles from "styles/Home.module.css";
 
@@ -10,8 +12,9 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <LangSwitcher />
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <Trans>Welcome to</Trans> <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
