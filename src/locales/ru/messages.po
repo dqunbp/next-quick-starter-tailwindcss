@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2021-03-08 10:48+0300\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: ru\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: src/i18n.ts:14
+msgid "English"
+msgstr "Английский"
+
+#: src/pages/index.tsx:23
+msgid "Get started by editing"
+msgstr "Начните с редактирования"
+
+#: src/i18n.ts:15
+msgid "Russian"
+msgstr "Русский"
+
+#: src/pages/index.tsx:16
+msgid "Welcome to"
+msgstr "Добро пожаловать в"
