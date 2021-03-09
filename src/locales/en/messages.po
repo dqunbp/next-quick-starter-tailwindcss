@@ -13,14 +13,18 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/components/language-switcher.tsx:7
+#: src/i18n.ts:14
 msgid "English"
 msgstr "English"
 
-#: src/components/language-switcher.tsx:8
+#: src/pages/index.tsx:23
+msgid "Get started by editing"
+msgstr "Get started by editing"
+
+#: src/i18n.ts:15
 msgid "Russian"
 msgstr "Russian"
 
-#: src/pages/index.tsx:15
+#: src/pages/index.tsx:16
 msgid "Welcome to"
 msgstr "Welcome to"

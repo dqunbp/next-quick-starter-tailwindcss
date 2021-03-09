@@ -1,21 +1,19 @@
-import Router, { useRouter } from "next/router";
-// import { I18n } from "@lingui/react";
-import { t, Trans } from "@lingui/macro";
+import { ChangeEvent } from "react";
+import { useRouter } from "next/router";
 import { useLingui } from "@lingui/react";
-import { useState } from "react";
+import { locales, localeNames } from "i18n";
+import { useCookieState } from "use-cookie-state";
 
-const availableLanguageNames = {
-  en: t`English`,
-  ru: t`Russian`,
-};
-const availableLanguages = Object.keys(availableLanguageNames);
-
-function LangSwitcher() {
+function LanguageSwitcher() {
   const router = useRouter();
-  const { i18n } = useLingui();
-  const [language, setLanguage] = useState(i18n.locale);
 
-  function onChange(e) {
+  const { i18n } = useLingui();
+
+  const [language, setLanguage] = useCookieState("NEXT_LOCALE", i18n.locale, {
+    encodeOps: { path: "/", expires: new Date("10000") },
+  });
+
+  function onChange(e: ChangeEvent<HTMLSelectElement>) {
     const nextLocale = e?.currentTarget?.value;
 
     if (!nextLocale) return;
@@ -25,21 +23,23 @@ function LangSwitcher() {
     router.push(router.asPath, router.asPath, { locale: nextLocale });
   }
 
+  const renderOption = (locale: string) => (
+    <option key={locale} value={locale}>
+      {i18n._(localeNames[locale])}
+    </option>
+  );
+
   return (
     <select
       className="border py-3 px-4 rounded-md shadow-sm"
-      key={language}
       name="language"
+      key={language}
       value={language}
       onChange={onChange}
     >
-      {availableLanguages.map((lang) => (
-        <option key={lang} value={lang} disabled={language === lang}>
-          {i18n._(availableLanguageNames[lang])}
-        </option>
-      ))}
+      {locales.map(renderOption)}
     </select>
   );
 }
 
-export default LangSwitcher;
+export default LanguageSwitcher;

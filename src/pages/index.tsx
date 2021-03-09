@@ -1,9 +1,14 @@
 import { Trans } from "@lingui/macro";
-import LangSwitcher from "components/language-switcher";
+
 import Head from "next/head";
 import styles from "styles/Home.module.css";
 
-export default function Home() {
+import { withLanguage } from "lib/with-language";
+import LangSwitcher from "components/language-switcher";
+import { locales, messages } from "i18n";
+import { GetStaticProps } from "next";
+
+function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -66,3 +71,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default withLanguage(Home);
