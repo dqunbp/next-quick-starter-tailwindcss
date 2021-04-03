@@ -8,9 +8,9 @@
 - tailwindcss
 - prettier
 - pre-commit hooks
+- lingui.js
+- react-query
 
 ---
 
-- lingui.js
-- react-query
 - eslint

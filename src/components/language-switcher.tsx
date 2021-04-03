@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
 import { useRouter } from "next/router";
 import { useLingui } from "@lingui/react";
-import { locales, localeNames } from "i18n";
+import { locales, localeNames } from "i18n-settings";
 import { useCookieState } from "use-cookie-state";
 
 function LanguageSwitcher() {

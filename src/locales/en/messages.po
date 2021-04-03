@@ -13,18 +13,66 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/i18n.ts:14
+#: src/pages/index.tsx:32
+msgid "API Response:"
+msgstr "API Response:"
+
+#: src/pages/index.tsx:14
+msgid "Create Next App"
+msgstr "Create Next App"
+
+#: src/pages/index.tsx:71
+msgid "Deploy"
+msgstr "Deploy"
+
+#: src/pages/index.tsx:63
+msgid "Discover and deploy boilerplate example Next.js projects."
+msgstr "Discover and deploy boilerplate example Next.js projects."
+
+#: src/pages/index.tsx:38
+msgid "Documentation"
+msgstr "Documentation"
+
+#: src/i18n-settings.ts:14
 msgid "English"
 msgstr "English"
 
-#: src/pages/index.tsx:23
+#: src/pages/index.tsx:60
+msgid "Examples"
+msgstr "Examples"
+
+#: src/pages/index.tsx:31
+msgid "Fetches the hello api..."
+msgstr "Fetches the hello api..."
+
+#: src/pages/index.tsx:41
+msgid "Find in-depth information about Next.js features and API."
+msgstr "Find in-depth information about Next.js features and API."
+
+#: src/pages/index.tsx:25
 msgid "Get started by editing"
 msgstr "Get started by editing"
 
-#: src/i18n.ts:15
+#: src/pages/index.tsx:74
+msgid "Instantly deploy your Next.js site to a public URL with Vercel."
+msgstr "Instantly deploy your Next.js site to a public URL with Vercel."
+
+#: src/pages/index.tsx:49
+msgid "Learn"
+msgstr "Learn"
+
+#: src/pages/index.tsx:52
+msgid "Learn about Next.js in an interactive course with quizzes!"
+msgstr "Learn about Next.js in an interactive course with quizzes!"
+
+#: src/pages/index.tsx:84
+msgid "Powered by"
+msgstr "Powered by"
+
+#: src/i18n-settings.ts:15
 msgid "Russian"
 msgstr "Russian"
 
-#: src/pages/index.tsx:16
+#: src/pages/index.tsx:21
 msgid "Welcome to"
 msgstr "Welcome to"

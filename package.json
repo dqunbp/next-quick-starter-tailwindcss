@@ -2,8 +2,10 @@
   "name": "next-starter",
   "version": "0.1.0",
   "private": true,
+  "author": "dqunbp",
   "scripts": {
-    "dev": "concurrently \"npm run watch\"  \"next dev\"",
+    "dev": "next dev",
+    "dev:watchpo": "concurrently \"npm run watch\"  \"next dev\"",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --config .prettierrc 'src/**/*.{ts,tsx,js,jsx}' --write",
@@ -21,10 +23,12 @@
   },
   "dependencies": {
     "@lingui/react": "^3.7.1",
+    "axios": "^0.21.1",
     "cookie": "^0.4.1",
     "next": "10.0.8",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-query": "^3.12.1",
     "use-cookie-state": "^1.1.1"
   },
   "devDependencies": {
