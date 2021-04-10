@@ -1,12 +1,12 @@
 {
-  "name": "next-starter",
+  "name": "nextjs-quick-starter-tailwindcss",
   "version": "0.1.0",
   "private": true,
   "author": "dqunbp",
   "scripts": {
     "dev": "next dev",
-    "dev:watchpo": "concurrently \"npm run watch\"  \"next dev\"",
-    "build": "next build",
+    "dev:watchi18n": "concurrently \"npm run watch\"  \"next dev\"",
+    "build": "npm run compile && next build",
     "start": "next start",
     "prettier": "prettier --config .prettierrc 'src/**/*.{ts,tsx,js,jsx}' --write",
     "extract": "NODE_ENV=development lingui extract",
@@ -26,9 +26,9 @@
     "@lingui/react": "^3.7.1",
     "axios": "^0.21.1",
     "cookie": "^0.4.1",
-    "next": "10.0.8",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "next": "^10.1.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-query": "^3.12.1",
     "use-cookie-state": "^1.1.1"
   },
