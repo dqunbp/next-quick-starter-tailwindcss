@@ -3,6 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "author": "dqunbp",
+  "keywords": [
+    "nextjs",
+    "starter",
+    "template",
+    "react",
+    "ssr",
+    "ssg",
+    "tailwindcss",
+    "react-query",
+    "lingui.js",
+    "i18n",
+    "eslint",
+    "husky",
+    "prettier",
+    "typescript",
+    "axios"
+  ],
   "scripts": {
     "dev": "next dev",
     "dev:watchi18n": "concurrently \"npm run watch\"  \"next dev\"",

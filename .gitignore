@@ -36,3 +36,5 @@ yarn-error.log*
 # lingui
 src/locales/_build/
 src/locales/**/*.js
+
+.vscode
