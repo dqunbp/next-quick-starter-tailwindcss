@@ -20,4 +20,7 @@ export const localeNames = {
   ru: t`Russian`,
 };
 
-export const locales = Object.keys(localeNames);
+export type Locale = keyof typeof localeNames;
+export const defaultLocale: Locale = "en";
+
+export const locales = Object.keys(localeNames) as Locale[];

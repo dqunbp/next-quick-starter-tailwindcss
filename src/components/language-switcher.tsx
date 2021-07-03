@@ -1,7 +1,7 @@
 import { ChangeEvent } from "react";
 import { useRouter } from "next/router";
 import { useLingui } from "@lingui/react";
-import { locales, localeNames } from "i18n-settings";
+import { locales, localeNames, Locale } from "i18n-settings";
 import { useCookieState } from "use-cookie-state";
 
 function LanguageSwitcher() {
@@ -14,16 +14,21 @@ function LanguageSwitcher() {
   });
 
   function onChange(e: ChangeEvent<HTMLSelectElement>) {
-    const nextLocale = e?.currentTarget?.value;
+    const nextLocale = e?.currentTarget?.value as Locale;
 
     if (!nextLocale) return;
+
+    if (!Object.keys(localeNames).includes(nextLocale)) {
+      console.error(`Unknown locale: ${nextLocale}`);
+      return;
+    }
 
     setLanguage(nextLocale);
 
     router.push(router.asPath, router.asPath, { locale: nextLocale });
   }
 
-  const renderOption = (locale: string) => (
+  const renderOption = (locale: Locale) => (
     <option key={locale} value={locale}>
       {i18n._(localeNames[locale])}
     </option>

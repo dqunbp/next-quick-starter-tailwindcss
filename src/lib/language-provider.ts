@@ -2,7 +2,7 @@ import * as React from "react";
 import { I18nProvider } from "@lingui/react";
 import { i18n } from "@lingui/core";
 
-import { messages } from "i18n-settings";
+import { defaultLocale, messages } from "i18n-settings";
 import { plurals } from "i18n-settings";
 import { useRouter } from "next/router";
 
@@ -13,12 +13,12 @@ const LanguageProvider: React.FC = ({ children }) => {
   React.useState(() => {
     i18n.load(messages);
     i18n.loadLocaleData(plurals);
-    i18n.activate(locale);
+    i18n.activate(locale || defaultLocale);
   });
 
   React.useEffect(() => {
     if (i18n.locale === locale) return;
-    i18n.activate(locale);
+    i18n.activate(locale || defaultLocale);
   }, [locale]);
 
   return React.createElement(I18nProvider, { i18n }, children);
