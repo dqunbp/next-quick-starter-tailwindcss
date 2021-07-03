@@ -18,7 +18,7 @@ function LanguageSwitcher() {
 
     if (!nextLocale) return;
 
-    if (!Object.keys(localeNames).includes(nextLocale)) {
+    if (!locales.includes(nextLocale)) {
       console.error(`Unknown locale: ${nextLocale}`);
       return;
     }
